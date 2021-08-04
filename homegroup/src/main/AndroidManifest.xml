@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.homegroup">
+    <application>
+        <activity android:name=".seckill.view.SecKillesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".seckill.view.SecKillValuesActivity"
+            android:screenOrientation="portrait"/>
+        <service android:name=".seckill.service.SecKillService"/>
+        <!--保证当前商品详情activity在activity栈中只存在一个实例对象-->
+        <activity android:name=".home.view.HomeValueActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+    </application>
+</manifest>

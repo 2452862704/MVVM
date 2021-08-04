@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_setting"
+        android:layout_marginRight="5dp"
+        android:id="@+id/seckill_item_img" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seckill_item_title"
+        android:layout_toRightOf="@id/seckill_item_img"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:text="sadasd"
+        android:maxLines="1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seckill_item_dec"
+        android:layout_toRightOf="@id/seckill_item_img"
+        android:layout_below="@id/seckill_item_title"
+        android:layout_marginTop="5dp"
+        android:text="sadasd"
+        android:ellipsize="end"
+        android:maxLines="1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seckill_item_price"
+        android:layout_toRightOf="@id/seckill_item_img"
+        android:layout_below="@id/seckill_item_dec"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/common_red"
+        android:text="11"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/seckill_add_tv"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/seckill_item_dec"
+        android:background="@drawable/seckill_bg"
+        android:gravity="center"
+        android:text="立即抢购"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

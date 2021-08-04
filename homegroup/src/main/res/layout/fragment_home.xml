@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="vm"
+            type="com.example.homegroup.home.viewmodel.HomeViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:orientation="vertical">
+        <LinearLayout
+            style="@style/SearchHeaderStyle"
+            android:paddingLeft="@dimen/common_padding">
+            <EditText
+                android:hint="搜索商品/品类"
+                android:cursorVisible="false"
+                android:editable="false"
+                style="@style/SearchHeaderEtStyle"/>
+            <ImageView
+                style="@style/WrapWrap"
+                android:src="@drawable/icon_scan"/>
+        </LinearLayout>
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:refresh="@{vm.refresh}"
+            app:load="@{vm.load}"
+            app:refreshListener="@{()->vm.onRefresh()}"
+            app:loadMoreListener="@{()->vm.onLoadMore()}">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:itemClickListener="@{vm}"
+                app:adapter="@{vm.adapter}"
+                app:imagebanner="@{vm.homeBannerEntities}"
+                app:txtbanner="@{vm.txtBanneres}"
+                app:menudata="@{vm.menues}"
+                app:hotdata="@{vm.hotImges}"
+                app:topdata="@{vm.topEntities}"
+                app:transform="@{vm}"/>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.usergroup">
+    <application>
+        <activity android:name=".view.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.ResetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.ForgetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.EdtUserActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.PhotoActivity"
+            android:screenOrientation="portrait"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.bw.usergroup.camera_file"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/camera_file" />
+        </provider>
+    </application>
+</manifest>

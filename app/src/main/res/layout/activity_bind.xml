@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="entity"
+            type="com.example.mvvm.databinding.entity.SingleEntity"/>
+        <variable name="singleClick"
+            type="com.example.mvvm.databinding.BindActivity.SingleClick"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@{entity.content}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@={entity.content}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取输入框输入内容"
+            android:onClick="@{()->singleClick.btnClick()}"
+            />
+    </LinearLayout>
+
+</layout>

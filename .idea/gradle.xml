@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../gradle-5.4.1-all/gradle-5.4.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CarGroup" />
+            <option value="$PROJECT_DIR$/CategoryGroup" />
+            <option value="$PROJECT_DIR$/FlycoTabLayout_Lib" />
+            <option value="$PROJECT_DIR$/GreendaoMoudle" />
+            <option value="$PROJECT_DIR$/LoadBitmap" />
+            <option value="$PROJECT_DIR$/MVVMCommon" />
+            <option value="$PROJECT_DIR$/Messagegroup" />
+            <option value="$PROJECT_DIR$/NetWorkMoudle" />
+            <option value="$PROJECT_DIR$/UserGroup" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/homegroup" />
+            <option value="$PROJECT_DIR$/myapplication" />
+            <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/y_divideritemdecoration" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

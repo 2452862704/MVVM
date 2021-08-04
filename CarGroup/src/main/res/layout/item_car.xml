@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+    <RadioButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/car_item_radio"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_setting"
+        android:layout_toRightOf="@id/car_item_radio"
+        android:layout_marginRight="5dp"
+        android:id="@+id/car_item_img" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_item_title"
+        android:layout_toRightOf="@id/car_item_img"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:text="sadasd"
+        android:maxLines="1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_item_dec"
+        android:layout_toRightOf="@id/car_item_img"
+        android:layout_below="@id/car_item_title"
+        android:layout_marginTop="5dp"
+        android:text="sadasd"
+        android:ellipsize="end"
+        android:maxLines="1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_item_price"
+        android:layout_toRightOf="@id/car_item_img"
+        android:layout_below="@id/car_item_dec"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/common_red"
+        android:text="11"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:background="@drawable/car_num_bg"
+        android:layout_below="@id/car_item_dec"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/car_item_left"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="-" />
+        <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/car_item_num"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0" />
+        <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/car_item_right"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="+" />
+    </LinearLayout>
+
+</RelativeLayout>

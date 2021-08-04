@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="gridStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/common_blue_light</item>
+        <item name="android:layout_rowWeight" tools:ignore="NewApi">1</item>
+        <item name="android:layout_columnWeight" tools:ignore="NewApi">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+</resources>

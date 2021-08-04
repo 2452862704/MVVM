@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cargroup">
+    <application>
+        <activity android:name=".view.CarListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.ConfirmOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.ShipAddressListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.EdtAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.OrderGroupActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.OrderDetailActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

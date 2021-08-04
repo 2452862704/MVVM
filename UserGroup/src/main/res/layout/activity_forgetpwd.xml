@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable name="vm"
+            type="com.example.usergroup.viewmodel.ForgetPwdViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/common_blue">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:onClick="@{()->vm.finish()}"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找回密码"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border_corner_all"
+            android:layout_margin="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText android:id="@+id/mMobileEt"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:paddingLeft="5dp"
+                    android:hint="请输入手机号码"
+                    android:text="@={vm.phone}"
+                    android:drawableLeft="@drawable/icon_phone"
+                    android:drawablePadding="5dp"
+                    android:layout_weight="1.0"
+                    android:inputType="phone"/>
+                <View android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_divider"/>
+                <Button
+                    android:id="@+id/mVerifyCodeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@{vm.timeStr}"
+                    android:onClick="@{()->vm.verify()}"
+                    android:textColor="@color/common_blue"
+                    android:background="@null"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_divider"/>
+            <EditText android:id="@+id/mVerifyCodeEt"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入短信验证码"
+                android:text="@={vm.verify}"
+                android:drawableLeft="@drawable/icon_verify_code"
+                android:drawablePadding="5dp"
+                android:inputType="number"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/mNextBtn"
+            style="@style/FullBtnStyle"
+            android:onClick="@{()->vm.next()}"
+            android:text="下一步" />
+    </LinearLayout>
+
+</layout>
